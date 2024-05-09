@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      
+      .active, .collapsible:hover {
+        background-color: #555;
+      }  
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+      .mainc{
+        margin: 5%;
+        width: 90%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+    </style>
+    <title>PWD Education Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/h1.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">VIDEO LECTURES</a></li>
+            <li><a href="./blog.html">NOTES AND ASSIGNMENT</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+            <li><a href="./resources.html">RESOURCES</a></li>
+            <li><a href="./fundamental.html">CS FUNDAMENTALS</a></li>
+            <li><a href="./quizzes.html">QUIZZES</a></li>
+            <li><a href="./project.html">PROJECT</a></li>
+            <li><a href="./experience.html">SUCCESS STORIES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>FAQs</h1>
+    </section>
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Fundamentals of C</b></p>
+      <button type="button" class="collapsible">1-What is a variable in C?</button>
+      <div class="content">
+        <p>A variable in C is a named storage location that holds a value, which can change during program execution.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do you declare a constant in C?</button>
+      <div class="content">
+        <p>Constants in C are declared using the const keyword followed by a data type and the constant name.</p>
+      </div>
+      <button type="button" class="collapsible">3-What is the purpose of the extern keyword in C?</button>
+      <div class="content">
+        <p>The extern keyword is used to declare a global variable or function that is defined in another file or externally. It specifies that the variable or function is defined elsewhere.</p>
+      </div>
+      <button type="button" class="collapsible">4-Explain the difference between local and global variables in C?</button>
+      <div class="content">
+        <p>Local variables are declared within a function or block and can only be accessed within that scope. Global variables are declared outside of any function and can be accessed throughout the program.</p>
+      </div>
+      <button type="button" class="collapsible">5-What is the static keyword used for in C?</button>
+      <div class="content">
+        <p>The static keyword has multiple uses in C. It can be used to declare static variables that retain their values between function calls, limit the scope of functions and variables to the file they are declared in, and declare static members in structs.</p>
+      </div>
+      <button type="button" class="collapsible">6-How are variables initialized in C?</button>
+      <div class="content">
+        <p> Variables in C can be initialized at the time of declaration using the assignment operator (=).</p>
+      </div>
+      <button type="button" class="collapsible">7-What is the difference between auto and register keywords in C?</button>
+      <div class="content">
+        <p>In modern C, auto keyword is rarely used and is implicit for local variables. register keyword suggests to the compiler to store the variable in a CPU register for faster access.</p>
+      </div>
+      <button type="button" class="collapsible">8- What are the basic data types supported in C?</button>
+      <div class="content">
+        <p>C supports basic data types such as int, float, double, char, void, short, long, etc.</p>
+      </div>
+      <button type="button" class="collapsible">9-Explain the volatile keyword in C?</button>
+      <div class="content">
+        <p>The volatile keyword is used to indicate that a variable may be changed unexpectedly by external factors such as hardware, and therefore should not be optimized by the compiler.</p>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="mainc">
+      <p><b style="color: green; font-size: large;">Introduction, variables, input/output, constants</b></p>
+      <button type="button" class="collapsible">1-How do I start programming in C?</button>
+      <div class="content">
+        <p>To start programming in C, you need to have a C compiler installed on your system. You can choose from various compilers like GCC, Clang, or Microsoft Visual Studio. Once installed, you can write C code using a text editor and save it with a .c extension. Then, compile the code using the compiler's command-line interface or an integrated development environment (IDE) and run the compiled executable to execute your program.</p>
+      </div>
+      <button type="button" class="collapsible">2-What are variables in C and how do I declare them?</button>
+      <div class="content">
+        <p>Variables in C are used to store data temporarily in computer memory. To declare a variable in C, you need to specify its data type followed by the variable name. For example, int x; declares an integer variable named x. You can also initialize the variable during declaration, like 'int x = 5;'.</p>
+      </div>
+      <button type="button" class="collapsible">3-How do I take user input in C?</button>
+      <div class="content">
+        <p>To take user input in C, you can use the scanf() function from the standard input/output library (stdio.h). For example:<br/>
+        
+          int num;<br/>
+          printf("Enter a number: ");<br/>
+          scanf("%d", &num);<br/>
+          This code prompts the user to enter a number, which is then stored in the variable num.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is the difference between scanf() and gets() for input in C?</button>
+      <div class="content">
+        <p>scanf() is used to read formatted input, whereas gets() is used to read a string of characters from the standard input. However, gets() is generally avoided due to its vulnerability to buffer overflow attacks. It's recommended to use safer alternatives like fgets() for reading strings.</p>
+      </div>
+      <button type="button" class="collapsible">5-How do I output data in C programming?</button>
+      <div class="content">
+        <p>To output data in C programming, you can use the printf() function from the stdio.h library. For example:</br>
+          int x = 10;</br>
+          printf("The value of x is: %d\n", x);</br>
+          This code prints "The value of x is: 10" to the console.
+        </p>
+      </div>
+      <button type="button" class="collapsible">6-Can I change the value of a constant in C?</button>
+      <div class="content">
+        <p>No, constants are values that cannot be changed during the execution of a program. Once defined, their values remain constant throughout the program's execution.</p>
+      </div>
+      <button type="button" class="collapsible">7-What are the rules for naming variables and constants in C?</button>
+      <div class="content">
+        <p>Variable and constant names in C must begin with a letter (either uppercase or lowercase) or an underscore (_). Subsequent characters can be letters, digits, or underscores. C is case-sensitive, so uppercase and lowercase letters are considered distinct.</p>
+      </div>
+      <button type="button" class="collapsible">8-How do I handle different data types in C programming?</button>
+      <div class="content">
+        <p>In C, you can handle different data types by using appropriate data type specifiers. For example, int is used for integers, float for floating-point numbers, char for characters, etc. You can also use typecasting to convert data from one type to another, and various conversion specifiers in printf() and scanf() functions for formatted input and output.</p>
+      </div>
+    </div>
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Conditional Statements in C</b></p>
+      <button type="button" class="collapsible">1-What are conditional statements in C?</button>
+      <div class="content">
+        <p>Conditional statements in C are used to make decisions based on certain conditions. They allow the program to execute different blocks of code depending on whether a specified condition evaluates to true or false.</p>
+      </div>
+      <button type="button" class="collapsible">2-What are the three main types of conditional statements in C?</button>
+      <div class="content">
+        <p>The three main types of conditional statements in C are:if statement, else if statement, switch statement</p>
+      </div>
+      <button type="button" class="collapsible">3-How does the if statement work in C?</button>
+      <div class="content">
+        <p>The if statement allows you to execute a block of code only if a specified condition is true. If the condition is false, the code inside the if block is skipped.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is the purpose of the else statement in C?</button>
+      <div class="content">
+        <p>The else statement is used in conjunction with if. If the condition specified in the if statement evaluates to false, the code inside the else block will be executed.</p>
+      </div>
+      <button type="button" class="collapsible">5-How do you use multiple conditions in C using else if statements?</button>
+      <div class="content">
+        <p>You can use else if statements to test multiple conditions sequentially after the initial if statement. This allows for more complex decision-making based on different scenarios.</p>
+      </div>
+      <button type="button" class="collapsible">6- Explain the switch statement in C.</button>
+      <div class="content">
+        <p> The switch statement provides a way to select one of many code blocks to be executed based on the value of an expression. It evaluates the expression once and then executes the code block corresponding to the matched case label.</p>
+      </div>
+      <button type="button" class="collapsible">7-What is the purpose of the break statement inside a switch statement?</button>
+      <div class="content">
+        <p>The break statement is used to terminate the switch statement. After a break statement is encountered, the program exits the switch block and continues executing the rest of the program.</p>
+      </div>
+      <button type="button" class="collapsible">8- Can you nest conditional statements in C?</button>
+      <div class="content">
+        <p>Yes, conditional statements can be nested inside one another. This means you can use an if or else statement inside another if or else block to create more complex decision structures.</p>
+      </div>
+      <button type="button" class="collapsible">9-How do you use logical operators with conditional statements in C?</button>
+      <div class="content">
+        <p>Logical operators (&& for AND, || for OR, ! for NOT) can be used to combine multiple conditions within a single if statement to create more complex conditional expressions.</p>
+      </div>
+    </div>
+
+
+
+    
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Expressions and assignments</b></p>
+      <button type="button" class="collapsible">1-What is the difference between an expression and an assignment in C programming?</button>
+      <div class="content">
+        <p>An expression is a combination of variables, constants, and operators that evaluate to a single value. It can be used anywhere a value is expected in C. An assignment, on the other hand, is a statement that stores a value into a variable using the assignment operator (=).</p>
+      </div>
+      <button type="button" class="collapsible">2-Can I use an assignment statement within an expression in C?</button>
+      <div class="content">
+        <p>Yes, you can use an assignment statement within an expression in C. However, it's crucial to remember that the value of the assignment expression is the value assigned to the variable. For example, x = y = 5; assigns 5 to both x and y, and the value of the entire expression is 5.</p>
+      </div>
+      <button type="button" class="collapsible">3-What happens if I assign a value to a variable within an expression without using the assignment operator (=)?</button>
+      <div class="content">
+        <p>In C, if you mistakenly use a single equal sign within an expression instead of a double equal sign (==), it will result in a comparison operation rather than an assignment. This could lead to logical errors or unintended behavior in your code.</p>
+      </div>
+      <button type="button" class="collapsible">4-Is there a difference between the pre-increment (++x) and post-increment (x++) operators in expressions?</button>
+      <div class="content">
+        <p>Yes, there is a difference. The pre-increment (++x) operator increments the value of x and then returns the incremented value, while the post-increment (x++) operator returns the current value of x and then increments it. Therefore, in an expression, the pre-increment operator will use the incremented value, whereas the post-increment operator will use the original value before incrementing.</p>
+      </div>
+      <button type="button" class="collapsible">5-Can I perform arithmetic operations directly within an assignment statement?</button>
+      <div class="content">
+        <p>Yes, you can perform arithmetic operations directly within an assignment statement in C. For example, x += 5; is equivalent to x = x + 5;. Similarly, -= for subtraction, *= for multiplication, /= for division, and %= for modulus operations can all be used within assignment statements.
+        </p>
+      </div>
+      <button type="button" class="collapsible">6-What happens if I assign a value to a variable that is outside the bounds of its data type in C?</button>
+      <div class="content">
+        <p> If you assign a value to a variable that is outside the bounds of its data type in C, the behavior is undefined. This means the result can vary depending on the compiler and system architecture. It may lead to unexpected results, memory corruption, or program crashes. It's crucial to ensure that assigned values are within the acceptable range of the variable's data type.</p>
+      </div>
+      <button type="button" class="collapsible">7-Can I assign the result of one expression to another variable within the same expression?</button>
+      <div class="content">
+        <p>Yes, you can assign the result of one expression to another variable within the same expression in C. This is commonly done to make code more concise and readable. For example, y = (x * 5) + (z / 2); involves multiple assignments within a single expression. However, it's essential to maintain clarity and avoid overly complex expressions for the sake of readability and maintainability.</p>
+      </div>
+    </div>
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Introduction to arrays</b></p>
+      <button type="button" class="collapsible">1-What is an array in C?</button>
+      <div class="content">
+        <p>An array in C is a collection of elements of the same data type stored in contiguous memory locations. Each element in the array is accessed by its index.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do you declare a 1D array in C?</button>
+      <div class="content">
+        <p>To declare a 1D array in C, specify the data type of the elements followed by square brackets [] and the array name.</p>
+      </div>
+      <button type="button" class="collapsible">3-How do you initialize a 1D array during declaration?</button>
+      <div class="content">
+        <p>You can initialize a 1D array during declaration by providing a comma-separated list of values enclosed in curly braces {}.</p>
+      </div>
+      <button type="button" class="collapsible">4-How do you access elements of a 1D array in C?</button>
+      <div class="content">
+        <p>Array elements are accessed using square brackets [] with the index of the element (starting from 0).</p>
+      </div>
+      <button type="button" class="collapsible">5-Can the size of a 1D array in C be changed once it is declared?</button>
+      <div class="content">
+        <p>No, the size of a 1D array in C is fixed and cannot be changed after declaration.</p>
+      </div>
+      <button type="button" class="collapsible">6-What is the maximum index value for accessing elements in a 1D array with n elements?</button>
+      <div class="content">
+        <p>The maximum index value for accessing elements in a 1D array with n elements is n-1, because array indexing starts from 0.</p>
+      </div>
+      <button type="button" class="collapsible">7-How do you calculate the total number of elements in a 1D array in C?</button>
+      <div class="content">
+        <p>The total number of elements in a 1D array can be calculated by dividing the total size of the array in bytes by the size of one element.</p>
+      </div>
+      <button type="button" class="collapsible">8-Can you pass a 1D array to a function in C?</button>
+      <div class="content">
+        <p>Yes, you can pass a 1D array to a function in C by specifying the array name as an argument. The function can receive the array either as a pointer or with explicit size information.</p>
+      </div>
+      <button type="button" class="collapsible">9-How do you find the sum of all elements in a 1D array in C?</button>
+      <div class="content">
+        <p>You can find the sum of all elements in a 1D array by iterating through the array and accumulating the values.</p>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Loops in C Programming</b></p>
+      <button type="button" class="collapsible">1-What is the difference between a "for" loop and a "while" loop in C programming?</button>
+      <div class="content">
+        <p>A "for" loop is typically used when the number of iterations is known beforehand, and it consists of three parts: initialization, condition, and increment/decrement. A "while" loop, on the other hand, is used when the number of iterations is not fixed and continues as long as the condition is true.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do I terminate a loop prematurely in C?</button>
+      <div class="content">
+        <p>You can terminate a loop prematurely using the "break" statement. When "break" is encountered within a loop, the loop is exited immediately, and control transfers to the statement following the loop.</p>
+      </div>
+      <button type="button" class="collapsible">3-Can I use nested loops in C programming?</button>
+      <div class="content">
+        <p>Yes, C supports nested loops, which means you can have one loop inside another loop. This is often used for iterating through multi-dimensional arrays or performing operations on nested data structures.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is an infinite loop, and how do I avoid it?</button>
+      <div class="content">
+        <p>An infinite loop is a loop that continues endlessly because its terminating condition is never met. To avoid infinite loops, ensure that the condition controlling the loop eventually becomes false or use control statements like "break" or "return" to exit the loop when necessary.</p>
+      </div>
+      <button type="button" class="collapsible">5-How can I iterate through an array using a loop in C?</button>
+      <div class="content">
+        <p>You can use either a "for" loop or a "while" loop to iterate through an array in C. In a "for" loop, you typically use the loop variable as the index to access each element of the array sequentially. In a "while" loop, you can use a separate index variable to traverse the array until reaching its end.</p>
+      </div>
+      <button type="button" class="collapsible">6-What is the purpose of the "continue" statement in C loops?</button>
+      <div class="content">
+        <p> The "continue" statement is used to skip the rest of the code within a loop for the current iteration and proceed to the next iteration. It is often used to skip certain iterations based on specific conditions without exiting the loop entirely.</p>
+      </div>
+      <button type="button" class="collapsible">7- Can I use loops to implement recursion in C?</button>
+      <div class="content">
+        <p>Yes, recursion can be implemented using loops in C, although it might not be as straightforward as using recursive function calls. This technique, known as "tail recursion elimination," involves using a loop to mimic the recursive behavior, typically with a stack or other data structure to manage function calls.</p>
+      </div>
+    </div>
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Recursion</b></p>
+      <button type="button" class="collapsible">1-What is recursion in programming?</button>
+      <div class="content">
+        <p>Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem.</p>
+      </div>
+      <button type="button" class="collapsible">2-What are the two main components required for a recursive function?</button>
+      <div class="content">
+        <p>Base case: A condition that determines when the recursion should stop.
+        Recursive case: A condition where the function calls itself with modified arguments to move closer to the base case.</p>
+      </div>
+      <button type="button" class="collapsible">3-Explain the concept of a base case in recursion</button>
+      <div class="content">
+        <p>A base case is a condition in a recursive function that specifies when the function should stop calling itself and return a result. It prevents infinite recursion.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is the role of the call stack in recursion?</button>
+      <div class="content">
+        <p>The call stack is used to manage function calls in recursion. Each recursive call adds a new frame to the stack, and when a base case is reached, the function calls are resolved one by one.</p>
+      </div>
+      <button type="button" class="collapsible">5-How do you prevent stack overflow in recursive functions?</button>
+      <div class="content">
+        <p>To prevent stack overflow in recursive functions, ensure that the base case is reached after a finite number of recursive calls. Tail recursion optimization can also be used where the recursive call is the last operation in the function.</p>
+      </div>
+      <button type="button" class="collapsible">6-What are the advantages of using recursion in programming?</button>
+      <div class="content">
+        <p>Recursive solutions can be elegant and concise for certain problems.Recursive functions can closely mirror mathematical induction, making them suitable for problems with inherent self-similarity.</p>
+      </div>
+      <button type="button" class="collapsible">7-Name some problems that are commonly solved using recursion.</button>
+      <div class="content">
+        <p>Factorial calculation, Fibonacci sequence generation, Binary tree traversal (e.g., inorder, preorder, postorder), Tower of Hanoi</p>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Functions in C Programming</b></p>
+      <button type="button" class="collapsible">1-What are local variables in C functions, and how are they different from global variables?</button>
+      <div class="content">
+        <p>Local variables in C are those declared within a function and are only accessible within that function. They have block scope, meaning they exist only within the block in which they are declared. Global variables, on the other hand, are declared outside of any function and can be accessed from any function within the program. The key difference is in their scope and accessibility.</p>
+      </div>
+      <button type="button" class="collapsible">2-How can I pass variables between functions in C?</button>
+      <div class="content">
+        <p>In C, variables can be passed between functions as arguments. When a function is called, arguments can be supplied, which are then used within the function. Additionally, variables can be passed by reference using pointers, allowing the function to modify the original variable's value.</p>
+      </div>
+      <button type="button" class="collapsible">3-What is the significance of the static keyword in relation to functions and variables in C?</button>
+      <div class="content">
+        <p>In C, the static keyword can be used to control the scope and lifetime of variables and functions. When applied to a local variable within a function, it preserves the variable's value between function calls. When applied to a global variable, it limits the variable's scope to the file in which it is declared.</p>
+      </div>
+      <button type="button" class="collapsible">4-How do I handle strings in C? Are there built-in functions for string manipulation?</button>
+      <div class="content">
+        <p>C provides a standard library for string manipulation called <string.h>. This library includes functions for tasks such as string concatenation, copying, comparison, and tokenization. Some commonly used functions include strcpy(), strcat(), strlen(), strcmp(), and strtok().</p>
+      </div>
+      <button type="button" class="collapsible">5-What is the difference between strcpy() and strncpy() functions in C?</button>
+      <div class="content">
+        <p>Both strcpy() and strncpy() are string copy functions in C. However, strcpy() copies the entire string from the source to the destination until it encounters a null character ('\0'). strncpy() allows you to specify the maximum number of characters to copy, which can prevent buffer overflow issues.</p>
+      </div>
+      <button type="button" class="collapsible">6-How can I determine the length of a string in C?</button>
+      <div class="content">
+        <p> You can determine the length of a string in C using the strlen() function, which returns the number of characters in a string excluding the null terminator ('\0'). Be cautious with this function as it assumes the string is null-terminated; otherwise, it can lead to undefined behavior.</p>
+      </div>
+      <button type="button" class="collapsible">7- Can I manipulate individual characters within a string in C?</button>
+      <div class="content">
+        <p>Yes, you can manipulate individual characters within a string in C. Strings in C are essentially arrays of characters, so you can access and modify individual characters using array notation or pointer arithmetic.</p>
+      </div>
+      <button type="button" class="collapsible">8- How do I convert between strings and numerical types in C?</button>
+      <div class="content">
+        <p>C provides functions like atoi() and atof() to convert strings to integers and floating-point numbers, respectively. Conversely, functions like sprintf() and snprintf() can be used to convert numerical values to strings.</p>
+      </div>
+      <button type="button" class="collapsible">9- What precautions should I take when working with string functions to avoid buffer overflow vulnerabilities?</button>
+      <div class="content">
+        <p>When using string functions in C, it's crucial to ensure that the destination buffers have sufficient space to accommodate the data being copied or concatenated. Always use functions like strncpy() instead of strcpy() and specify buffer sizes to prevent overflow. Additionally, consider using safe versions of string functions like strlcpy() and strlcat() where available, or implement bounds checking manually.</p>
+      </div>
+    </div>
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Structures</b></p>
+      <button type="button" class="collapsible">1-What is a structure in C?</button>
+      <div class="content">
+        <p>A structure in C is a user-defined data type that allows you to combine different types of data into a single entity. It is also referred to as a "struct."</p>
+      </div>
+      <button type="button" class="collapsible">2-How do you declare a structure in C?</button>
+      <div class="content">
+        <p>You can declare a structure using the struct keyword followed by the structure tag and a list of members enclosed in curly braces {}.</p>
+      </div>
+      <button type="button" class="collapsible">3-What are members of a structure?</button>
+      <div class="content">
+        <p>Members of a structure are individual variables inside the structure that hold different pieces of data. Each member has its own data type and name.</p>
+      </div>
+      <button type="button" class="collapsible">4-How do you access members of a structure in C?</button>
+      <div class="content">
+        <p>You can access members of a structure using the dot . operator followed by the member name.</p>
+      </div>
+      <button type="button" class="collapsible">5-Can structures contain other structures as members?</button>
+      <div class="content">
+        <p>Yes, structures can contain other structures as members, which is known as nested or hierarchical structures.</p>
+      </div>
+      <button type="button" class="collapsible">6-How do you initialize a structure variable in C?</button>
+      <div class="content">
+        <p>You can initialize a structure variable during declaration by providing values for its members inside curly braces {}.</p>
+      </div>
+      <button type="button" class="collapsible">7-What is the size of a structure in C?</button>
+      <div class="content">
+        <p>The size of a structure in C is determined by the sum of the sizes of its members, padded to ensure proper alignment according to the system memory requirements.</p>
+      </div>
+      <button type="button" class="collapsible">8-How do you pass a structure to a function in C?</button>
+      <div class="content">
+        <p>You can pass a structure to a function either by passing it directly as an argument or by passing a pointer to the structure.</p>
+      </div>
+    </div>
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Introduction to 2-d Arrays</b></p>
+      <button type="button" class="collapsible">1-What is a 2-D array in C?</button>
+      <div class="content">
+        <p>A 2-D array in C is a data structure that stores elements in a grid format, organized in rows and columns. It allows for the representation of tabular data, such as matrices or tables, by providing a way to access elements using two indices: row and column.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do you declare a 2-D array?</button>
+      <div class="content">
+        <p>To declare a 2-D array in C, you specify the data type of its elements followed by the array name and the dimensions within square brackets. For example, int matrix[3][3]; declares a 3x3 integer array named matrix.</p>
+      </div>
+      <button type="button" class="collapsible">3-How do you access elements in a 2-D array?</button>
+      <div class="content">
+        <p>Elements in a 2-D array are accessed using two indices, representing the row and column positions of the element within the array. For example, matrix[i][j] accesses the element at the i-th row and j-th column of the matrix array.</p>
+      </div>
+      <button type="button" class="collapsible">4-Can the dimensions of a 2-D array be dynamic?</button>
+      <div class="content">
+        <p>In C, the dimensions of an array must be specified at compile time, so you cannot have dynamically sized 2-D arrays. However, you can simulate dynamic behavior by using pointers to arrays or by allocating memory dynamically using functions like malloc().</p>
+      </div>
+      <button type="button" class="collapsible">5-How do you initialize a 2-D array?</button>
+      <div class="content">
+        <p>You can initialize a 2-D array in C using nested curly braces to specify the initial values for each row. For example:</br>
+          int matrix[2][3] = {</br>
+              {1, 2, 3},</br>
+              {4, 5, 6}</br>
+          };</p>
+      </div>
+      <button type="button" class="collapsible">6-What is the memory layout of a 2-D array?</button>
+      <div class="content">
+        <p> In memory, a 2-D array is stored in row-major order, meaning that the elements of each row are stored in contiguous memory locations. The next row follows immediately after the previous row. This layout allows for efficient access to elements using row and column indices.</p>
+      </div>
+      <button type="button" class="collapsible">7- Can a 2-D array have different row sizes?</button>
+      <div class="content">
+        <p>No, in C, all rows of a 2-D array must have the same number of columns. This is because a 2-D array is essentially an array of arrays, and each inner array must have a consistent size to maintain the rectangular shape of the overall 2-D array.</p>
+      </div>
+      <button type="button" class="collapsible">8- How do you pass a 2-D array to a function?</button>
+      <div class="content">
+        <p>To pass a 2-D array to a function in C, you can either pass it as a pointer to an array or specify the dimensions of the array in the function parameter. Alternatively, you can use a pointer to an array as the function parameter to maintain the array's dimensions.</p>
+      </div>
+    </div>
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Strings</b></p>
+      <button type="button" class="collapsible">1-What is a string in C?</button>
+      <div class="content">
+        <p>A string in C is an array of characters terminated by a null character ('\0'). It represents a sequence of characters stored in contiguous memory locations.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do you declare and initialize a string in C?</button>
+      <div class="content">
+        <p>You can declare and initialize a string as a character array with a null terminator ('\0') at the end.</p>
+      </div>
+      <button type="button" class="collapsible">3-What is the null character ('\0') in C strings?</button>
+      <div class="content">
+        <p>The null character ('\0') is used to mark the end of a string in C. It has a value of 0 and is automatically appended to string literals.</p>
+      </div>
+      <button type="button" class="collapsible">4-How do you access individual characters of a string in C?</button>
+      <div class="content">
+        <p>Individual characters of a string can be accessed using array notation ([]) with zero-based indexing.</p>
+      </div>
+      <button type="button" class="collapsible">5-What is the difference between char array and string in C?</button>
+      <div class="content">
+        <p>In C, a char array is a sequence of characters without a null terminator, while a string is a char array terminated by a null character ('\0').</p>
+      </div>
+      <button type="button" class="collapsible">6-How do you calculate the length of a string in C?</button>
+      <div class="content">
+        <p>You can calculate the length of a string using the strlen() function from <string.h>.</p>
+      </div>
+      <button type="button" class="collapsible">7-How do you concatenate two strings in C?</button>
+      <div class="content">
+        <p>You can concatenate two strings using the strcat() function from <string.h>.</p>
+      </div>
+      <button type="button" class="collapsible">8-How do you compare two strings in C?</button>
+      <div class="content">
+        <p>You can compare two strings using the strcmp() function from <string.h>. It returns 0 if the strings are equal.</p>
+      </div>
+    </div>
+
+
+    
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Pointers</b></p>
+      <button type="button" class="collapsible">1-What is a pointer in C?</button>
+      <div class="content">
+        <p>A pointer in C is a variable that stores the memory address of another variable. It enables dynamic memory allocation and facilitates efficient manipulation of data structures. Pointers are fundamental for tasks like dynamic memory allocation, array manipulation, and function pointers.</p>
+      </div>
+      <button type="button" class="collapsible">2-How do pointers work in C?</button>
+      <div class="content">
+        <p>Pointers in C hold the address of a variable, allowing direct access to its memory location. They enable efficient passing of large data structures to functions, as passing the address consumes less memory than passing the entire data itself. Pointers facilitate dynamic memory allocation, where memory can be allocated or deallocated during program execution.</p>
+      </div>
+      <button type="button" class="collapsible">3-What are the types of pointers in C?</button>
+      <div class="content">
+        <p>In C, pointers can be categorized into several types: null pointers, void pointers, pointer to pointer, function pointers, and array pointers. Each type serves specific purposes; for instance, void pointers can hold the address of any data type, while function pointers point to functions, enabling dynamic function calls.</p>
+      </div>
+      <button type="button" class="collapsible">4-How do you declare and initialize pointers in C?</button>
+      <div class="content">
+        <p>Pointers in C are declared using the asterisk (*) symbol followed by the data type. To initialize a pointer, it's assigned the address of a variable using the address-of operator (&). For example, int *ptr; declares a pointer to an integer, while ptr = &variable; assigns the address of variable to ptr.</p>
+      </div>
+      <button type="button" class="collapsible">5-What is pointer arithmetic in C?</button>
+      <div class="content">
+        <p>Pointer arithmetic in C involves performing arithmetic operations on pointers. Adding an integer value to a pointer moves it forward by that many elements of its data type. Similarly, subtracting moves it backward. Pointer arithmetic is commonly used for traversing arrays, iterating through data structures, and dynamic memory allocation.</p>
+      </div>
+      <button type="button" class="collapsible">6-How do you use pointers to functions in C?</button>
+      <div class="content">
+        <p> Pointers to functions in C store the address of functions, enabling dynamic function calls and function passing as arguments. They are declared similarly to regular function declarations but with an asterisk (*) before the function name. Using function pointers, you can implement callback mechanisms, dynamic dispatch, and function-based polymorphism.</p>
+      </div>
+      <button type="button" class="collapsible">7- What are the dangers of using pointers in C?</button>
+      <div class="content">
+        <p>One of the major dangers of using pointers in C is the potential for memory-related errors such as segmentation faults, memory leaks, and dangling pointers. Incorrect manipulation of pointers, uninitialized pointers, or accessing memory beyond its bounds can lead to unpredictable behavior and system crashes.</p>
+      </div>
+      <button type="button" class="collapsible">8- How do you avoid memory leaks when using pointers?</button>
+      <div class="content">
+        <p>Memory leaks occur when dynamically allocated memory is not properly deallocated, leading to memory consumption over time. To avoid memory leaks, it's crucial to pair each memory allocation with a corresponding deallocation using functions like free() in C. Properly managing the lifecycle of dynamically allocated memory ensures efficient memory usage and prevents leaks.</p>
+      </div>
+      <button type="button" class="collapsible">9- What is the significance of void pointers in C?</button>
+      <div class="content">
+        <p>Void pointers in C are generic pointers that can hold the address of any data type. They provide flexibility in handling memory allocation and data manipulation, especially in scenarios where the exact data type is unknown or varies. Void pointers are commonly used in functions that need to accept or return different data types dynamically.</p>
+      </div>
+    </div>
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Dynamic Memory Allocation</b></p>
+      <button type="button" class="collapsible">1-What is dynamic memory allocation in C?</button>
+      <div class="content">
+        <p>Dynamic memory allocation in C refers to the process of allocating memory during program execution, allowing the program to request memory dynamically at runtime.</p>
+      </div>
+      <button type="button" class="collapsible">2-What are the primary functions used for dynamic memory allocation in C?</button>
+      <div class="content">
+        <p>malloc(), calloc(), realloc()
+      </div>
+      <button type="button" class="collapsible">3-How do you allocate memory dynamically using malloc() in C?</button>
+      <div class="content">
+        <p>You can allocate memory dynamically using malloc() by specifying the number of bytes to allocate. It returns a pointer to the allocated memory block.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is the purpose of sizeof operator in dynamic memory allocation?</button>
+      <div class="content">
+        <p>The sizeof operator is used to calculate the size of a data type in bytes. It is commonly used in dynamic memory allocation to ensure the correct number of bytes are allocated.</p>
+      </div>
+      <button type="button" class="collapsible">5-How do you allocate memory for an array of elements using calloc() in C?</button>
+      <div class="content">
+        <p>You can allocate memory for an array of elements using calloc() by specifying the number of elements and the size of each element. It initializes the allocated memory to zero.</p>
+      </div>
+      <button type="button" class="collapsible">6-How do you resize dynamically allocated memory using realloc() in C?</button>
+      <div class="content">
+        <p>You can resize dynamically allocated memory using realloc() by passing the existing pointer along with the new size. It may move the existing memory block to a new location.</p>
+      </div>
+      <button type="button" class="collapsible">7-What happens if malloc() or calloc() fails to allocate memory?</button>
+      <div class="content">
+        <p>If malloc() or calloc() fails to allocate memory (returns NULL), it indicates that there is insufficient memory available. It's important to check for this condition and handle it appropriately in your program.</p>
+      </div>
+      <button type="button" class="collapsible">8-How do you free dynamically allocated memory in C?</button>
+      <div class="content">
+        <p>You can free dynamically allocated memory using the free() function. This deallocates the memory block and makes it available for reuse.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Linked List</b></p>
+      <button type="button" class="collapsible">1-How do you delete a node from a linked list in C?</button>
+      <div class="content">
+        <p>To delete a node from a linked list in C, you first need to traverse the list to find the node to delete. Once found, adjust the pointers of the preceding node to skip the node to be deleted, then free the memory occupied by the node. Ensure proper handling for cases where the node to be deleted is the head or tail of the list to prevent memory leaks and maintain list integrity.</p>
+      </div>
+      <button type="button" class="collapsible">2-Explain the difference between singly linked lists and doubly linked lists in C.</button>
+      <div class="content">
+        <p>Singly linked lists in C consist of nodes with one pointer, typically pointing to the next node in the list. Doubly linked lists, on the other hand, have nodes with two pointers, one pointing to the next node and the other pointing to the previous node. This additional pointer in doubly linked lists facilitates traversing the list in both forward and backward directions, enhancing operations like insertion and deletion.</p>
+      </div>
+      <button type="button" class="collapsible">3-How can you reverse a linked list in C without using extra memory?</button>
+      <div class="content">
+        <p>Reversing a linked list in C without extra memory involves manipulating the pointers of the nodes within the list. Start with three pointers, current, previous, and next. Traverse the list, changing the pointer of each node to point to its previous node. After reaching the end, update the head pointer to the last node, effectively reversing the list in-place without requiring additional memory allocation.</p>
+      </div>
+      <button type="button" class="collapsible">4-What is a circular linked list, and how do you detect a loop in it using C?</button>
+      <div class="content">
+        <p>A circular linked list is a linked list where the last node points back to the first node, forming a loop. To detect a loop in a circular linked list using C, you can use Floyd's cycle-finding algorithm. This algorithm involves using two pointers traversing the list at different speeds. If the pointers meet at any point, it indicates the presence of a loop. Otherwise, if one of the pointers reaches the end of the list, there's no loop.</p>
+      </div>
+      <button type="button" class="collapsible">5-How do you find the middle element of a linked list in C?</button>
+      <div class="content">
+        <p>To find the middle element of a linked list in C, you can use the slow and fast pointer approach. Initialize two pointers, slow and fast, both pointing to the head of the list. Move the slow pointer by one step and the fast pointer by two steps at each iteration. When the fast pointer reaches the end of the list, the slow pointer will be at the middle element, providing an efficient way to find the middle in linear time.</p>
+      </div>
+      <button type="button" class="collapsible">6-How do you merge two sorted linked lists into one sorted list in C?</button>
+      <div class="content">
+        <p> Merging two sorted linked lists into one sorted list in C involves comparing elements from both lists and rearranging pointers accordingly. Start with a result list initialized to NULL. Traverse both lists simultaneously, comparing elements at each step. Append the smaller element to the result list and move the corresponding pointer forward. Continue this process until one of the lists is fully traversed, then append the remaining elements of the other list to the result.</p>
+      </div>
+      <button type="button" class="collapsible">7- What are the advantages and disadvantages of linked lists compared to arrays in C?</button>
+      <div class="content">
+        <p>One of the major dangers of using pointers in C is the potential for memory-related errors such as segmentation faults, memory leaks, and dangling pointers. Incorrect manipulation of pointers, uninitialized pointers, or accessing memory beyond its bounds can lead to unpredictable behavior and system crashes.</p>
+      </div>
+      <button type="button" class="collapsible">8- How do you implement a stack using a linked list in C?</button>
+      <div class="content">
+        <p>Implementing a stack using a linked list in C involves defining a structure for the nodes and another structure for the stack. The stack structure typically contains a pointer to the top of the stack. Operations like push and pop manipulate this pointer to insert and remove elements from the stack, respectively. These operations involve updating pointers and managing memory dynamically, ensuring proper stack behavior while utilizing the underlying linked list structure.</p>
+      </div>
+    </div>
+
+    <div class="mainc">
+      <p><b style="color: green;font-size: large;">Sorting Techniques</b></p>
+      <button type="button" class="collapsible">1- What is sorting in programming?</button>
+      <div class="content">
+        <p>Sorting is the process of arranging elements in a specific order (e.g., ascending or descending) based on certain criteria, such as numerical or lexicographical order.</p>
+      </div>
+      <button type="button" class="collapsible">2-Name some common sorting algorithms used in C.</button>
+      <div class="content">
+        <p>Common sorting algorithms used in C include:Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort</p>
+      </div>
+      <button type="button" class="collapsible">3-Explain Bubble Sort and how it works.</button>
+      <div class="content">
+        <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.</p>
+      </div>
+      <button type="button" class="collapsible">4-Describe Selection Sort in C.</button>
+      <div class="content">
+        <p>Selection Sort works by repeatedly finding the minimum element from the unsorted part of the array and placing it at the beginning. It gradually builds a sorted sequence.</p>
+      </div>
+      <button type="button" class="collapsible">5-How does Insertion Sort work? Provide a brief information in C.</button>
+      <div class="content">
+        <p>Insertion Sort builds the final sorted array one element at a time by iterating through the array and inserting each element into its correct position.</p>
+      </div>
+      <button type="button" class="collapsible">6-Explain Merge Sort in C</button>
+      <div class="content">
+        <p>Merge Sort is a divide-and-conquer algorithm that divides the array into smaller subarrays, sorts them recursively, and then merges the sorted subarrays to produce a sorted array.</p>
+      </div>
+    </div>
+    <!-- about us content -->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Pioneering Development of Education for Disabled Persons to Illuminate Brighter Futures</p>    <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made With <i class="fa-solid fa-heart"></i> by Rahul Das</p>
+    </section>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

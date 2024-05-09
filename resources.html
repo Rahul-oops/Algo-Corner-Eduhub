@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWD Education Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .divided-column {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .divided-column div:nth-child(odd) {
+        background-color: lightblue; /* Change the color as needed */
+        margin:1mm;
+    }
+    .divided-column div:nth-child(even) {
+        background-color: lightgreen; /* Change the color as needed */
+        margin: 1mm;
+    }
+        .mainc{
+        margin: 5%;
+        width: 90%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+    </style>
+    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/h1.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">VIDEO LECTURES</a></li>
+            <li><a href="./blog.html">NOTES AND ASSIGNMENT</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+            <li><a href="./resources.html">RESOURCES</a></li>
+            <li><a href="./fundamental.html">CS FUNDAMENTALS</a></li>
+            <li><a href="./quizzes.html">QUIZZES</a></li>
+            <li><a href="./project.html">PROJECT</a></li>
+            <li><a href="./experience.html">SUCCESS STORIES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Additional Resources</h1>
+    </section>
+
+   <!--course-->
+   <div class="mainc">
+   <table>
+    <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Resources</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>C Programming Language</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/c/c_intro.php">w3schools</a></div>
+                <div><a href="https://www.geeksforgeeks.org/c-programming-language/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq&si=qHLDuj1TUEeUwZSF">youtube</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLiOa6ike4WAHH3HyPUu6pUG-r0LApvW-l&si=iUaQfc944Bj6SM9W">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>C++ Programming Language</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/cpp/">w3schools</a></div>
+                <div><a href="https://www.geeksforgeeks.org/c-plus-plus/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLAE85DE8440AA6B83&si=ADFiKtmXtwzPE6YI">youtube</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLiOa6ike4WAEnWjWsLN6FDOApS9ED6x7v&si=IaBNEKfUTiTil17r">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Java Programming Language</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/java/">w3schools</a></div>
+                <div><a href="https://www.geeksforgeeks.org/java/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhij8Oplrvjt_RlDliZQgdxoV&si=aXwAB9FfL398JH4z">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Python Programming Language</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/python/">w3schools</a></div>
+                <div><a href="https://www.geeksforgeeks.org/python-programming-language/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhigZkqrHbI_ZkPBrIr5Rsd5L&si=VBfIl_C_G-YOTa3a">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/html/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhihSr4HroBBQt_quHL42JLif&si=V2Eup53e9PYtg7pG">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/css/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhiisW-k9eEON2vxGABv-PafB&si=Ey2C55jySwNZaiat">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/js/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhiiaQjuOfvgx_-gzVBlCxrk0&si=snwRo1Fa8aVJOLLg">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/sql/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2dHU&si=v9Ac5WA8RdPVXnmx">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Bootstrap</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/bootstrap5/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhij_HswuaGK-ABs1vfC5HTKn&si=mJNquE51MeyfjlVp">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/REACT/DEFAULT.ASP">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhignjLLXTJWkRJKN-SgAqClL&si=rFDgtoh454Tatxht">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/nodejs/">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhiiSVvVP_9w57-aU7kx_H9bu&si=4Lqnnijm60OjC955">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Express.js</td>
+            <td class="divided-column">
+                <div><a href="https://www.javatpoint.com/expressjs-tutorial">javatpoint</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhigerSlDF_v1t1mM2iGomXnq&si=IM7jf0hT9IxtjjkM">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Mongodb</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/mongodb/">javatpoint</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLbGui_ZYuhijy1SpwtIS9IwL6OJdbr4kE&si=Blnm0fTtYOIiSc9u">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Structure and Algorithm</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/dsa/index.php">w3schools</a></div>
+                <div><a href="https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&si=KkacL9rg7Z3zk7p8">youtube</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&si=aSf0aybhyX7qh2uH">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Object Oriented Programming</td>
+            <td class="divided-column">
+                <div><a href="https://www.w3schools.com/cpp/cpp_oop.asp">w3schools</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLA8BpojmT5JF4KKQCEIqURc71z6nvYXEK&si=I3WFHxg5s8DnSo4t">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Computer Networks</td>
+            <td class="divided-column">
+                <div><a href="https://www.javatpoint.com/computer-network-tutorial">javatpoint</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&si=FgLwCO6_dCyi4azv">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Operating Systems</td>
+            <td class="divided-column">
+                <div><a href="https://www.geeksforgeeks.org/operating-systems/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLDzeHZWIZsTr3nwuTegHLa2qlI81QweYG&si=-V3ex-GcuG5E5R1O">youtube</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Competitive programming</td>
+            <td class="divided-column">
+                <div><a href="https://www.geeksforgeeks.org/competitive-programming-a-complete-guide/">geeksforgeeks</a></div>
+                <div><a href="https://youtube.com/playlist?list=PLzjZaW71kMwTGbP1suqY16w1VSb9ZNuvE&si=6x1hW8wchxZBCvi4">youtube</a></div>
+            </td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </tbody>
+   </table>
+   </div>
+
+<!--end facilities-->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Pioneering Development of Education for Disabled Persons to Illuminate Brighter Futures</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made With <i class="fa-solid fa-heart"></i> by Rahul Das</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

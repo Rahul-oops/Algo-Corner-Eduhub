@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWD Education Development</title>
+    <style>
+    .sec {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 20px;
+        max-width: 1200px;
+        width: 100%;
+    }
+    
+    h1 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 10px;
+        /* color :greenyellow;
+    } */
+}
+    
+    p {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .project-card {
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #f9f9f9;
+        width: 100%; /* Making the card width 100% */
+    }
+    
+    .project-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .project-description {
+        margin-bottom: 10px;
+    }
+    
+    .source-code-link {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .source-code-link:hover {
+        background-color: #0056b3;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/h1.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">VIDEO LECTURES</a></li>
+            <li><a href="./blog.html">NOTES AND ASSIGNMENT</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+            <li><a href="./resources.html">RESOURCES</a></li>
+            <li><a href="./fundamental.html">CS FUNDAMENTALS</a></li>
+            <li><a href="./quizzes.html">QUIZZES</a></li>
+            <li><a href="./project.html">PROJECT</a></li>
+            <li><a href="./experience.html">SUCCESS STORIES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Project Ideas</h1>
+    </section>
+
+   <!--course-->
+   <section class="sec">
+    <div class="card">
+        <h1>Project Ideas</h1>
+        <div class="project-card">
+            <div class="project-title">Project 1: Rock Paper Scissors</div>
+            <div class="project-description">Play the classic Rock Paper Scissors game against the computer with a simple C application. Use basic C knowledge like if-else statements, random value generation, and input-output handling. The game allows a single player to compete against the computer, maintaining scores for both players.</div>
+            <a href="https://www.geeksforgeeks.org/rock-paper-scissor-in-c/" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+    
+        <div class="project-card">
+            <div class="project-title">Project 2: Simple Calculator</div>
+            <div class="project-description">The Simple Calculator is a C-based program designed to handle fundamental arithmetic operations such as addition, subtraction, multiplication, and division. This application leverages fundamental concepts of C programming including conditional statements (if-else), loops, etc. The main functionalities of this program are as follows:
+
+            </br>1.Addition
+            </br>2.Subtraction
+            </br>3.Multiplication
+            </br>4.Division
+            </br>5.Calculation of logarithmic values
+            </br>6.Calculation of square roots</div>
+            <a href="https://www.geeksforgeeks.org/c-program-to-make-a-simple-calculator/" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+    
+        <div class="project-card">
+            <div class="project-title">Project 3: Snake Ladder Game</div>
+            <div class="project-description">
+                Snake and Ladder is a popular board game enjoyed by many. The game follows simple rules:
+                
+            </br>1.The objective is to be the first player to reach 100 points.
+            </br>2.Each player takes turns to roll a dice and move forward accordingly.
+            </br>3.Landing on a snake reduces the player's points, while landing on a ladder increases them.
+            </br>4.The game continues until one player reaches or exceeds 100 points.
+            </br></br>We can implement these rules into a C program to create a Snake and Ladder application. The program's functionality will include:
+                
+            </br></br>1.Two players participating in a single game.
+            </br>2.Generating random dice rolls to determine movement.
+            </br>3.Tracking each player's points using variables.
+            </br>4.Ending the game once any player reaches or surpasses 100 points</div>
+            <a href="https://github.com/Akashganjal02/Snake-and-ladder-game-in-C" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 4: Bank Management System</div>
+            <div class="project-description">The banking industry plays a significant role in the service sector due to its extensive data management requirements within a single application. Utilizing the C programming language, we can develop an application tailored to efficiently manage bank data. This application leverages fundamental concepts of C such as strings, arrays, structures, and more.
+
+            </br> </br>Outlined below are the key functionalities of the Bank Management System Application:
+                
+            </br></br>1.Fund Transfer: Enables users to transfer money between accounts seamlessly.
+            </br>2.Account Creation: Facilitates the creation of new bank accounts for customers.
+            </br>3.Balance Inquiry: Allows users to check their account balance conveniently.
+            </br>4.Login Mechanism: Implements secure login functionality for authorized access to the system.</div>
+            <a href="https://www.geeksforgeeks.org/bank-account-system-in-c-using-file-handling/" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 5: School Management System</div>
+            <div class="project-description">ur School Management System Application streamlines the process of accessing comprehensive student data. With this C-based application, school administrators can effortlessly manage student information.
+
+            </br></br>Key functionalities include:
+                
+            </br></br>1.Add Student Details: Seamlessly input new student information into the system.
+                
+            </br>2.Search by Roll Number: Quickly locate a student by their unique roll number.
+                
+            </br>3.Search by First Name: Easily find a student using their first name.
+                
+            </br>4.Course Enrollment Search: Retrieve a list of students enrolled in a specific course.
+                
+            </br>5.Student Count: Obtain the total count of students currently registered.
+                
+            </br>6.Student Deletion: Effortlessly remove a student record from the system.
+                
+            </br>7.Update Student Information: Edit and update existing student details as necessary.</div>
+            <a href="https://www.geeksforgeeks.org/student-information-management-system/" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 6: Hospital Management System</div>
+            <div class="project-description">Hospital Management System is a comprehensive application designed to efficiently manage hospital data, including patient information, available beds, pricing, and more. Developed in C language, this system utilizes key concepts such as strings, structs, and sorting algorithms.
+
+            </br></br>Key functionalities of the Hospital Management System include:
+                
+            </br></br>1.Displaying hospital information
+            </br>2.Listing patient details
+            </br>3.Sorting data by bed prices
+            </br>4.Sorting data by availability of beds
+            </br>5.Sorting data by patient names
+            </br>6.Sorting data by ratings and reviews
+            </br>7.Filtering hospitals based on specific cities.</div>
+            <a href="https://github.com/Nandakishore-Menon/Hospital-Management-System" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 7: Bus Reservation System</div>
+            <div class="project-description">
+                Introducing a Bus Reservation System built in C language, a solution to alleviate the stress of offline ticket booking for travelers. Utilizing fundamental C concepts such as conditional statements, arrays, and strings, this system streamlines the booking process.
+                
+            </br></br>Key Features:
+                
+            </br></br>1.User-friendly Login System for secure access.
+            </br>2.Efficient Ticket Booking functionality facilitating hassle-free reservations.
+            </br>3.Ticket Cancellation option for flexibility in travel plans.
+            </br>4.Real-time Bus Status Checking to keep travelers informed</div>
+            <a href="https://github.com/krcpr007/busReservation" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 8: Cricket Score Board</div>
+            <div class="project-description">Cricket, the second most popular sport globally, enjoys immense popularity in India, with millions of enthusiasts following the game passionately. Keeping track of live cricket scores can be challenging, considering the dynamic nature of the sport. However, with basic C knowledge, we can develop a straightforward application to fulfill this need.
+
+                Our Simple Cricket Score Display Application offers essential functionalities tailored for cricket enthusiasts. Users can access match statistics, including runs scored, directly through the application. Moreover, they have the capability to update scores in real-time, ensuring they stay informed about the latest developments in ongoing matches.</div>
+            <a href="https://github.com/Ankur1210/cricket_score_board_display/tree/master" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 9: Online Voting System</div>
+            <div class="project-description">An imperative aspect of any democratic society is the electoral process, where a significant populace actively participates in voting. A robust and fair voting system is indispensable to ensure an unbiased election. Leveraging the simplicity and versatility of the C programming language, we can craft an Online Voting System. This project entails fundamental concepts such as string manipulation, structuring data, and utilizing arrays.
+
+            </br></br>Key functionalities of the Online Voting System include:
+                
+            </br></br>1.User input acquisition for voting
+            </br>2.Storage of votes
+            </br>3.Vote tabulation
+            </br>4.Announcement of election results</div>
+            <a href="https://github.com/Rajattheonlyhero/Online-Voting-System-Data-Structure-Project" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Project 10: Tic-tac-toe Game</div>
+            <div class="project-description">Creating a Tic-Tac-Toe game to be played between two players. Each player selects either 'O' or 'X' to mark their cells on the game board. The game begins with one player and concludes when a player successfully fills an entire row, column, or diagonal with their chosen character. In the event of no winning combination, the game ends in a draw.</div>
+            <a href="https://github.com/pncnmnp/tic-tac-toe" class="source-code-link">View Source Code(GFG)</a>
+        </div>
+    </div>
+   </section>
+<!--end facilities-->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p style="text-align: center;">Pioneering Development of Education for Disabled Persons to Illuminate Brighter Futures</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p style="text-align: center;">Made With <i class="fa-solid fa-heart"></i> by Rahul Das</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

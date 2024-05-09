@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-container {
+  max-width: 1500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.topics-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topic-container {
+  width: 100%; /* Adjust width as needed */
+}
+
+.topic-container h2 {
+  margin-bottom: 10px;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#topic1-container{
+  background-color: aquamarine;
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic2-container{
+  background-color: rgb(255, 127, 217);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic3-container{
+  background-color: rgb(157, 127, 255);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic4-container{
+  background-color: rgb(255, 187, 127);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic5-container{
+  background-color: rgb(127, 208, 255);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic6-container{
+  background-color: rgb(255, 251, 127);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic7-container{
+  background-color: rgb(127, 255, 225);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic8-container{
+  background-color: rgb(127, 174, 255);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic9-container{
+  background-color: rgb(229, 255, 127);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic10-container{
+  background-color: rgb(249, 127, 255);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic11-container{
+  background-color: rgb(255, 165, 127);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic12-container{
+  background-color: rgb(255, 127, 155);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic13-container{
+  background-color: rgb(127, 255, 153);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic14-container{
+  background-color: rgb(127, 155, 255);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+#topic15-container{
+  background-color: rgb(255, 127, 127);
+  margin : 15px ;
+  padding: 10px;
+  width: 100%;
+}
+.option {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+.result {
+  margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn,
+.restart-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover,
+.restart-btn:hover {
+  background-color: #0056b3;
+}
+
+
+        .mainc{
+          margin: 5%;
+          width: 100%;
+          border: 3px solid green;
+          padding: 10px;
+        }
+    </style>
+    <title>PWD Education Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/h1.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">VIDEO LECTURES</a></li>
+            <li><a href="./blog.html">NOTES AND ASSIGNMENT</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+            <li><a href="./resources.html">RESOURCES</a></li>
+            <li><a href="./fundamental.html">CS FUNDAMENTALS</a></li>
+            <li><a href="./quizzes.html">QUIZZES</a></li>
+            <li><a href="./project.html">PROJECT</a></li>
+            <li><a href="./experience.html">SUCCESS STORIES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Interactive Quizzes</h1>
+    </section>
+
+   <!--course-->
+
+   <div class="quiz-container">
+    <h1>Multiple Choice Quiz</h1>
+    <div class="topics-container">
+      <div id="topic1-container" class="topic-container"></div>
+      <div id="topic2-container" class="topic-container"></div>
+      <div id="topic3-container" class="topic-container"></div>
+      <div id="topic4-container" class="topic-container"></div>
+      <div id="topic5-container" class="topic-container"></div>
+      <div id="topic6-container" class="topic-container"></div>
+      <div id="topic7-container" class="topic-container"></div>
+      <div id="topic8-container" class="topic-container"></div>
+      <div id="topic9-container" class="topic-container"></div>
+      <div id="topic10-container" class="topic-container"></div>
+      <div id="topic11-container" class="topic-container"></div>
+      <div id="topic12-container" class="topic-container"></div>
+      <div id="topic13-container" class="topic-container"></div>
+      <div id="topic14-container" class="topic-container"></div>
+      <div id="topic15-container" class="topic-container"></div>
+      <!-- Add more topic containers as needed -->
+    </div>
+  </div>
+
+<!--end facilities-->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Pioneering Development of Education for Disabled Persons to Illuminate Brighter Futures</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made With <i class="fa-solid fa-heart"></i> by Rahul Das</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  <script>
+let topics = [
+    {
+    name: "Introduction, variables, input/output, constants",
+    questions: [
+      {
+        question: "What is the primary function of the main() function in a C program?",
+        options: ["Define global variables", "Declare constants", "Specify program entry point", "Perform input/output operations"],
+        answer: "Specify program entry point"
+      },
+      {
+        question: "Which symbol is used to declare a single-line comment in C?",
+        options: ["//", "--", "/*", "#"],
+        answer: "//"
+      },
+      {
+        question: "What is the purpose of a variable in C programming?",
+        options: ["To store constants", "To perform arithmetic operations", "To store and manipulate data", "To declare functions"],
+        answer: "To store and manipulate data"
+      },
+      {
+        question: "In C, which data type is used to store integer values?",
+        options: ["float", "double", "int", "char"],
+        answer: "int"
+      },
+      {
+        question: "Which of the following is NOT a valid variable name in C?",
+        options: ["my_variable", "123variable", "_myVariable", "variable123"],
+        answer: "123variable"
+      },
+      {
+        question: "Which function is used to input data from the standard input device (keyboard) in C?",
+        options: ["scanf()", "printf()", "gets()", "puts()"],
+        answer: "scanf()"
+      },
+      {
+        question: "In C, how can you declare a constant value?",
+        options: ["Using the keyword 'var'", "Using the keyword 'const'", "Using the keyword 'static'", "Using the keyword 'define'"],
+        answer: "Using the keyword 'const'"
+      },
+      {
+        question: "Which format specifier is used to display integers in C's printf() function?",
+        options: ["%f", "%d", "%c", "%s"],
+        answer: "%d"
+      },
+      {
+        question: "What is the purpose of the 'include' directive in C?",
+        options: ["To include external libraries", "To define constants", "To declare variables", "To execute a loop"],
+        answer: "To include external libraries"
+      },
+      {
+        question: "Which of the following is a valid constant in C?",
+        options: ["constant_var", "const var", "CONSTANT_VAR", "constantVar"],
+        answer: "CONSTANT_VAR"
+      }
+    ]
+  },{
+    name: "Expressions and assignments",
+    questions: [
+      {
+        question: "Which of the following is not a valid variable name in C?",
+        options: ["my_var", "123var", "_var", "var123"],
+        answer: "123var"
+      },
+      {
+        question: "What does the sizeof operator return in C?",
+        options: ["Value of a variable", "Size of a data type", "Address of a variable", "ASCII value of a character"],
+        answer: "Size of a data type"
+      },
+      {
+        question: "Which header file is used for input and output operations in C?",
+        options: ["stdlib.h", "math.h", "string.h", "stdio.h"],
+        answer: "stdio.h"
+      },
+      {
+        question: "What is the correct syntax to declare a pointer variable in C?",
+        options: ["int *ptr;", "pointer ptr;", "*int ptr;", "ptr int *;"],
+        answer: "int ptr;"
+      },
+      {
+        question: "What is the purpose of the break statement in C?",
+        options: ["To terminate a loop or switch statement", "To skip the current iteration of a loop", "To define a case in a switch statement", "To continue to the next iteration of a loop"],
+        answer: "To terminate a loop or switch statement"
+      },
+      {
+        question: "Which of the following is a correct way to initialize an array in C?",
+        options: ["int numbers[5] = {1, 2, 3, 4, 5};", "int numbers[5] = {1, 2, 3};", "int numbers[] = {1, 2, 3, 4, 5};", "All of the above"],
+        answer: "strcmp()"
+      },
+      {
+        question: "Which function is used to compare two strings in C?",
+        options: [" strcopy()", "strcompare()", "strcmp()", "strconcat()"],
+        answer: "strcmp()"
+      },
+      {
+        question: "What is the correct syntax to dynamically allocate memory in C using malloc?",
+        options: ["int *ptr = malloc(sizeof(int));", " int *ptr = malloc(int);", "int ptr = malloc(sizeof(int));", "int *ptr = malloc(sizeof(int) * n);"],
+        answer: "int ptr = malloc(sizeof(int));"
+      },
+      {
+        question: "Which symbol is used for single-line comments in C?",
+        options: ["//", "##", "%", "j#4"],
+        answer: "//"
+      },
+      {
+        question: "Which data type is used to store single characters in C?",
+        options: ["int", "float", "char", "double"],
+        answer: "char"
+      }
+    ]
+  }, 
+  {
+    name: "Expressions and assignments",
+    questions: [
+      {
+        question: "What does the following expression evaluate to in C language: 5 + 3 * 2?",
+        options: ["11", "16", "10", "13"],
+        answer: "16"
+      },
+      {
+        question: "In C language, which operator is used to assign a value to a variable?",
+        options: ["==", "=", "+=", ":="],
+        answer: "="
+      },
+      {
+        question: "What is the output of the following C code snippet?\n\"int x = 10;\nx += 5;\nprintf(\"%d\", x);\"",
+        options: ["10", "15", "5", "20"],
+        answer: "15"
+      },
+      {
+        question: "Which of the following is a valid identifier in C for a variable name?",
+        options: ["2myVar", "_myVar", "my-Var", "my Var"],
+        answer: "_myVar"
+      },
+      {
+        question: "What will be the value of y after the following C code is executed?\"int x = 5,y;y = x++;\"",
+        options: ["5", "6", "4", "10"],
+        answer: "5"
+      },
+      {
+        question: "Which operator is used for finding the remainder of a division in C language?",
+        options: ["%", "/", "*", "//"],
+        answer: "%"
+      },
+      {
+        question: "What will be the value of z after the following C code is executed?\"int x = 7, y = 3, z;z = x / y;\"",
+        options: ["2", "2.33", "2.5", "3"],
+        answer: "2"
+      },
+      {
+        question: "Which of the following is the correct syntax for declaring and initializing a constant in C language?",
+        options: ["const int PI = 3.14159;", "constant int PI = 3.14159;", "int constant PI = 3.14159;", "int PI = constant(3.14159);"],
+        answer: "const int PI = 3.14159;"
+      },
+      {
+        question: "What does the expression x == y evaluate to in C language if x = 5 and y = 5?",
+        options: ["True", "False", "Undefined", "Error"],
+        answer: "True"
+      },
+      {
+        question: "Which of the following statements is true about the C assignment operator =?",
+        options: ["It is used to compare two values.", "It can only assign values to variables of the same data type.", "It can be used to assign multiple values simultaneously.", "It can be used to perform arithmetic operations."],
+        answer: "It can only assign values to variables of the same data type."
+      }
+    ]
+  },{
+    name: "Conditional Statements",
+    questions: [
+      {
+        question: "Which statement is used to execute a block of code only if a specified condition is true in C?",
+        options: ["for", "if", "switch", "while"],
+        answer: "if"
+      },
+      {
+        question: "What is the syntax for an if statement in C?",
+        options: ["if (condition) { }", "if {condition} then { }", "if (condition) then { }", "condition if { }"],
+        answer: "if (condition) { }"
+      },
+      {
+        question: "Which operator is used to combine multiple conditions in an if statement in C?",
+        options: ["|| (logical OR)", "&& (logical AND)", "! (logical NOT)", "== (equality)"],
+        answer: "&& (logical AND)"
+      },
+      {
+        question: "What does the else statement allow in C?",
+        options: ["It allows the execution of a block of code if a condition is true", "It allows the execution of a block of code if a condition is false", " It terminates the program", "It defines a loop structure"],
+        answer: "It allows the execution of a block of code if a condition is false"
+      },
+      {
+        question: "What is the purpose of the else if statement in C?",
+        options: ["It allows nesting of if statements", "It is used to combine conditions within a single if statement", "It allows the execution of a block of code if the previous condition is true", "It defines a loop structure"],
+        answer: "It allows the execution of a block of code if the previous condition is false and the current condition is true"
+      },
+      {
+        question: "How do you execute a different block of code based on the value of a variable in C?",
+        options: ["Using the if statement", "Using the for loop", "Using the switch statement", "Using the while loop"],
+        answer: "Using the switch statement"
+      },
+      {
+        question: "What is the purpose of the break statement in a switch statement in C?",
+        options: ["It skips to the next case", "It terminates the switch statement", "It continues to the next iteration of the loop", "It exits the loop"],
+        answer: "It terminates the switch statement"
+      },
+      {
+        question: "Which conditional statement is used to execute a block of code repeatedly as long as a specified condition is true in C?",
+        options: ["if", "else", "for", "while"],
+        answer: "while"
+      },
+      {
+        question: "Which of the following is used to define multiple possible paths of execution based on the value of an expression in C?",
+        options: ["if", "else", "switch", "for"],
+        answer: "switch"
+      },
+      {
+        question: "Which operator is used to check for equality in a conditional statement in C?",
+        options: ["=", "==", "!=", "=!"],
+        answer: "=="
+      }
+    ]
+  },
+  {
+    name: "Loops in C Programming",
+    questions: [
+      {
+        question: "What is the purpose of using loops in C programming?",
+        options: ["To execute a block of code multiple times", "To perform a specific operation once", "To define functions", "To declare variables"],
+        answer: "To execute a block of code multiple times"
+      },{
+        question: "Which loop in C executes its body at least once, regardless of the condition?",
+        options: ["for loop", "while loop", "do-while loop", "switch loop"],
+        answer: "do-while loop"
+      },{
+        question: "Which loop structure is preferred when the number of iterations is known beforehand?",
+        options: ["for loop", "while loop", "do-while loop", "switch loop"],
+        answer: "for loop"
+      },{
+        question: "What does the following code snippet do? for (int i = 10; i >= 0; i -= 2) {printf(\"%d \", i);}",
+        options: ["Prints numbers from 10 to 0", "Prints numbers from 0 to 10", "Prints even numbers from 10 to 0", "Prints odd numbers from 10 to 0"],
+        answer: "Prints even numbers from 10 to 0"
+      },{
+        question: "How is an infinite loop created in C?",
+        options: ["By using the break statement", "By using the continue statement", "By omitting the loop control variable", "By using the goto statement"],
+        answer: "By omitting the loop control variable"
+      },{
+        question: "What keyword is used to terminate the current iteration of a loop and proceed to the next iteration?",
+        options: ["exit", "break", "return", "continue"],
+        answer: "continue"
+      },{
+        question: "Which loop control statement is used to exit the loop immediately, skipping the remaining iterations?",
+        options: ["exit", "break", "return", "continue"],
+        answer: "break"
+      },{
+        question: "What does the statement 'i++' do in a for loop?",
+        options: ["Decrements the loop counter", "Increments the loop counter", "Halts the loop execution", "Resets the loop counter"],
+        answer: "Increments the loop counter"
+      },{
+        question: "In a for loop, where is the initialization statement typically placed?",
+        options: ["Before the loop body", "After the loop body", "Inside the loop body", "None of the above"],
+        answer: "Before the loop body"
+      },{
+        question: "What does the following loop statement do: 'while (x < 10) { x += 2; }'?",
+        options: ["It adds 2 to x until x is less than 10", "It adds 2 to x until x is greater than 10", "It multiplies x by 2 until x is less than 10", "It has a syntax error"],
+        answer: "It adds 2 to x until x is less than 10"
+      }
+    ]
+  },{
+    name: "Introduction to arrays",
+    questions: [
+      {
+        question: "What is an array in C?",
+        options: ["A collection of similar data elements", "A function that performs repetitive tasks", "A variable that holds multiple values of different data types", "A reserved keyword for looping"],
+        answer: "A collection of similar data elements"
+      },
+      {
+        question: "How do you declare an integer array named scores with 5 elements in C?",
+        options: ["int scores = {10, 20, 30, 40, 50};", "int[5] scores = {10, 20, 30, 40, 50};", "int scores[5] = {10, 20, 30, 40, 50};", "scores = {10, 20, 30, 40, 50};"],
+        answer: "int scores[5] = {10, 20, 30, 40, 50};"
+      },
+      {
+        question: "What is the index of the first element in an array in C?",
+        options: ["0", "1", "2", "3"],
+        answer: "0"
+      },
+      {
+        question: "How do you access the third element of an array named numbers in C?",
+        options: ["numbers[3];", "numbers(3);", "numbers{3}", "numbers[2];"],
+        answer: "numbers[2];"
+      },
+      {
+        question: "What happens if you try to access an element outside the bounds of an array in C?",
+        options: ["Program crashes", "Compiler error", "Undefined behavior", "Nothing happens"],
+        answer: "Undefined behavior"
+      },
+      {
+        question: "Which operator is used to calculate the number of elements in an array in C?",
+        options: ["*", "&", "size of", "length"],
+        answer: "size of"
+      },
+      {
+        question: "How do you initialize all elements of an array named values to zero in C?",
+        options: ["values[0] = 0", "values = {0}", "int values[10] = {0};", "values = 0"],
+        answer: "int values[10] = {0};"
+      },
+      {
+        question: "Which of the following statements is true about arrays in C?",
+        options: ["Arrays can hold elements of different data types", "Array size can be changed during runtime", "Arrays are always allocated in contiguous memory locations", "Arrays cannot be passed to functions"],
+        answer: "Arrays are always allocated in contiguous memory locations"
+      },
+      {
+        question: "What is the correct way to pass an array arr to a function in C?",
+        options: ["void func(arr)", "void func(&arr)", "void func(int arr[])", "void func(int *arr)"],
+        answer: "void func(int arr[])"
+      },
+      {
+        question: "How do you find the size of an array numbers in terms of number of elements in C?",
+        options: ["sizeof(numbers)", "size(numbers)", "length(numbers)", "count(numbers)"],
+        answer: "sizeof(numbers)"
+      }
+    ]
+  },
+  {
+    name: "Functions in C Programming",
+    questions: [
+      {
+        question: "What is a function in C programming?",
+        options: ["A data type", "A collection of variables", "A set of instructions grouped together to perform a specific task", "A reserved keyword"],
+        answer: "A set of instructions grouped together to perform a specific task"
+      },{
+        question: "What is recursion in the context of functions?",
+        options: ["Calling a function within itself", "Calling a function with multiple arguments", "Calling a function from another function", "Defining a function without a return type"],
+        answer: "Calling a function within itself"
+      },{
+        question: "What is the purpose of the return statement in a function?",
+        options: ["To terminate the function execution", "To return a value to the calling function", "To print output to the console", "To declare a variable"],
+        answer: "To return a value to the calling function"
+      },{
+        question: "What is the scope of a variable declared inside a function?",
+        options: ["Local to the function", "Global to the program", "Local to the block where it's declared", "Local to the file where it's declared"],
+        answer: "Local to the function"
+      },{
+        question: "Which of the following is a valid function declaration in C?",
+        options: ["int function(int a, b);", "int function(int a, int b);", "function(int a, int b) int;", "function a, b int;"],
+        answer: "int function(int a, int b);"
+      },{
+        question: "What is the purpose of a function header in C?",
+        options: ["To define the function's return type", "To specify the function's name", "To declare the function's parameters", "To separate the function's declaration from its definition"],
+        answer: "To separate the function's declaration from its definition"
+      },{
+        question: "Which of the following is a valid way to pass an array to a function in C?",
+        options: ["void myFunction(array[])", "void myFunction(array)", "void myFunction(int array[])", "void myFunction(*array)"],
+        answer: "void myFunction(int array[])"
+      },{
+        question: "Can a function return multiple values in C?",
+        options: ["No, a function can only return one value in C.", "Yes, a function can return multiple values in C.", "A function can return multiple values in C, but only if the values are of the same type.", "A function can return multiple values in C, but only if the values are of different types."],
+        answer: "No, a function can only return one value in C."
+      },{
+        question: "In C programming, how are arguments passed to functions by default?",
+        options: ["By reference", "By value", "By pointer", "By address"],
+        answer: "By value"
+      },{
+        question: "In C programming, how can you pass an array to a function without specifying its size?",
+        options: ["By using pointers", "By using the 'sizeof' operator", "Both of These", "None of These"],
+        answer: "By using pointers"
+      }
+    ]
+  },{
+    name: "Recursion",
+    questions: [
+      {
+        question: " What is recursion in C?",
+        options: ["A loop construct", "A function that calls itself", "A data structure", "A conditional statement"],
+        answer: "A function that calls itself"
+      },
+      {
+        question: "Which of the following is required for a recursive function to terminate?",
+        options: ["It must have a for loop", " It must have a base case", "It must use global variables", "It must have a switch statement"],
+        answer: "It must have a base case"
+      },
+      {
+        question: "What is a base case in recursion?",
+        options: ["The last statement in a recursive function", "The case where a function calls itself", "The condition that stops the recursive calls", "The first statement in a recursive function"],
+        answer: "The condition that stops the recursive calls"
+      },
+      {
+        question: "Which statement is true about recursive functions in terms of stack memory usage?",
+        options: ["Recursive functions use less stack memory", "Recursive functions use a separate memory segment", "Recursive functions use more stack memory for each recursive call", "Recursive functions do not use stack memory"],
+        answer: "Recursive functions use more stack memory for each recursive call"
+      },
+      {
+        question: "Which data structure is commonly used to implement recursion in C?",
+        options: ["Stack", "Queue", "Array", "Linked list"],
+        answer: "Stack"
+      },
+      {
+        question: "What will happen if a recursive function does not have a base case?",
+        options: ["It will compile with a warning", "It will cause an infinite loop", "It will terminate immediately", "It will execute only once"],
+        answer: "It will cause an infinite loop"
+      },
+      {
+        question: "What is tail recursion in C?",
+        options: ["A recursive function that calls another function", "A recursive function that uses a loop construct", "A recursive function where the recursive call is the last statement", "A recursive function that has multiple base cases"],
+        answer: "A recursive function where the recursive call is the last statement"
+      },
+      {
+        question: "What is the time complexity of recursive algorithms such as factorial or Fibonacci implemented without memoization?",
+        options: ["O(n)", "O(log n)", "O(n log n)", "O(2^n)"],
+        answer: "O(2^n)"
+      },
+      {
+        question: "Which statement is true about indirect recursion in C?",
+        options: ["It involves a function calling itself", "It involves two or more functions calling each other in a circular manner", "It is not allowed in C programming", "It uses a loop construct instead of recursion"],
+        answer: "It involves two or more functions calling each other in a circular manner"
+      },
+      {
+        question: "Which of the following statements is true about recursion in C?",
+        options: ["Recursion can always be replaced with iteration", "Recursion consumes less memory compared to iteration", "Recursion is suitable for all types of problems", "Recursion simplifies the understanding of code"],
+        answer: "Recursion can always be replaced with iteration"
+      }
+    ]
+  }
+,{
+    name: "Introduction to 2-d Arrays",
+    questions: [
+      {
+        question: "How many elements are there in a 2-D array declared as int matrix[2][3]?",
+        options: ["2", "3", "4", "6"],
+        answer: "6"
+      },{
+        question: "How do you access the first element of the second row in a 2-D array arr with dimensions arr[3][3]?",
+        options: ["arr[1][0]", "arr[0][1]", "arr[1][1]", "arr[0][0]"],
+        answer: "16"
+      },{
+        question: "What is the correct syntax to access an element in a 2-D array?",
+        options: ["matrix[row][column];", "matrix(column, row);", "matrix[row, column];", "matrix.column[row];"],
+        answer: "matrix[row][column];"
+      },{
+        question: "In C, how are 2-D arrays stored in memory?",
+        options: ["Row-major order", "Column-major order", "Random order", "In a linked list"],
+        answer: "Row-major order"
+      },{
+        question: "What is the output of the following code? 'int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};printf('%d', arr[1][2]);'",
+        options: ["1", "2", "5", "6"],
+        answer: "6"
+      },{
+        question: "How do you initialize all elements of a 2-D array to zero in C?",
+        options: ["int arr[][] = 0;", "int arr[0][0] = 0;", "int arr[rows][cols] = {0};", "int arr[rows][cols] = {{0}};"],
+        answer: "int arr[rows][cols] = {{0}};"
+      },{
+        question: "What is the correct syntax to pass a 2-D array to a function in C?",
+        options: ["void func(int arr[][])", "void func(int arr[][])[]", "void func(int arr[][cols])", "void func(int arr[rows][])"],
+        answer: "void func(int arr[][cols])"
+      },{
+        question: "How do you determine the number of rows in a 2-D array arr with the declaration int arr[5][3]?",
+        options: ["sizeof(arr) / sizeof(arr[0])", "sizeof(arr)", "sizeof(arr[0]) / sizeof(arr)", "sizeof(arr) / sizeof(int)"],
+        answer: "sizeof(arr) / sizeof(arr[0])"
+      },{
+        question: "Which of the following is true regarding the memory allocation of a 2-D array arr[3][4] in C?",
+        options: ["Memory for all elements is allocated in a contiguous block.", "Memory for each row is allocated in a separate block.", "Memory for each column is allocated in a separate block.", "Memory allocation depends on the compiler"],
+        answer: "Memory for all elements is allocated in a contiguous block."
+      },{
+        question: "Which of the following options correctly represents a 2-D array in memory?",
+        options: ["An array of pointers to arrays", "A pointer to an array of pointers", "A pointer to a pointer", "A linked list of arrays"],
+        answer: "An array of pointers to arrays"
+      }
+      
+    ]
+  },{
+    name: "Structures",
+    questions: [
+      {
+        question: "What is a structure in C?",
+        options: ["A built-in data type", "A user-defined data type that can hold multiple variables of different data types", "A control statement", "A mathematical function"],
+        answer: "A user-defined data type that can hold multiple variables of different data types"
+      },
+      {
+        question: "How do you initialize a structure variable emp of type Employee in C?",
+        options: ["Employee emp = { \"John\", 30 };", "emp = { \"John\", 30 };", "struct Employee emp = { \"John\", 30 };", "emp = Employee { \"John\", 30 };"],
+        answer: "Employee emp = { \"John\", 30 };"
+      },
+      {
+        question: "Which operator is used to access members of a structure variable in C?",
+        options: [".", "->", ":", ","],
+        answer: "."
+      },
+      {
+        question: "How do you access the age member of a structure variable person in C?",
+        options: ["person->age", "person.age", "person::age", "person[age]"],
+        answer: "person.age"
+      },
+      {
+        question: "Which statement is true about nested structures in C?",
+        options: ["Nested structures cannot be defined in C", "Nested structures cannot contain pointers", "Nested structures can only have one level of nesting", "Nested structures can have structures as members"],
+        answer: "Nested structures can have structures as members"
+      },
+      {
+        question: "What is the purpose of typedef in C structures?",
+        options: ["To define new data types", "To access structure members", "To declare variables", "To include header files"],
+        answer: "To define new data types"
+      },
+      {
+        question: "Which statement is true about passing structures to functions in C?",
+        options: ["Structures cannot be passed to functions", "Structures are always passed by value", "Structures can only be passed by reference", "Structures can be passed by value or by reference"],
+        answer: "Structures can be passed by value or by reference"
+      },
+      {
+        question: "How do you dynamically allocate memory for a structure variable emp of type Employee in C?",
+        options: ["struct Employee *emp = malloc(sizeof(Employee));", "Employee *emp = malloc(sizeof(Employee));", "struct Employee emp = malloc(sizeof(Employee));", "Employee emp = malloc(Employee);"],
+        answer: "struct Employee *emp = malloc(sizeof(Employee));"
+      },
+      {
+        question: "Which statement is true about bit-fields in C structures?",
+        options: ["Bit-fields are used to create arrays of bits", "Bit-fields can only be of type int", "Bit-fields allow packing multiple data members within a single byte", "Bit-fields cannot be accessed using bitwise operators"],
+        answer: "Bit-fields allow packing multiple data members within a single byte"
+      },
+      {
+        question: "What is the correct syntax to access a member b of a structure variable s using a pointer in C?",
+        options: ["s->b", "s.b", "s::b", "s[b]"],
+        answer: "s->b"
+      }
+    ]
+  },{
+    name: "Strings",
+    questions: [
+      {
+        question: "Which of the following is the correct way to declare a string in C?",
+        options: ["char str[] = \"Hello\";", "string str = \"Hello\";", "char* str = \"Hello\";", "str = \"Hello\";"],
+        answer: "char str[] = \"Hello\";"
+      },
+      {
+        question: "In C, how is the end of a string represented?",
+        options: ["With a newline character (\n)", "With a null character (\0)", "With a space character ( )", "With a dollar sign ($)"],
+        answer: "With a null character (\0)"
+      },
+      {
+        question: "What is the length of the string \"Hello\" in C, including the null terminator?",
+        options: ["4", "5", "6", "7"],
+        answer: "6"
+      },
+      {
+        question: "Which library must be included to use string functions in C?",
+        options: ["<math.h>", "<stdio.h>", "<stdlib.h>", "<string.h>"],
+        answer: "<string.h>"
+      },
+      {
+        question: "What is the correct way to compare two strings str1 and str2 in C?",
+        options: ["if (str1 == str2)", "if (strcmp(str1, str2) == 0)", "if (str1.equals(str2))", "if (compare(str1, str2))"],
+        answer: "if (strcmp(str1, str2) == 0)"
+      },
+      {
+        question: "Which function is used to concatenate two strings in C?",
+        options: ["strcat()", "strncat()", "strcpy()", "strncpy()"],
+        answer: "strcat()"
+      },
+      {
+        question: "What does the strlen() function in C return?",
+        options: ["The length of a string excluding the null terminator", "The number of words in a string", "The size of the memory allocated to a string", "The length of a string including the null terminator"],
+        answer: "The length of a string excluding the null terminator"
+      },
+      {
+        question: "What is the correct way to copy a string src to another string dest in C?",
+        options: ["strcpy(src, dest);", "strcpy(dest, src);", "strcopy(dest, src);", "copy(dest, src);"],
+        answer: "strcpy(dest, src);"
+      },
+      {
+        question: "Which function is used to find the first occurrence of a character in a string in C?",
+        options: ["strchr()", "strrchr()", "strstr()", "strcspn()"],
+        answer: "strchr()"
+      },
+      {
+        question: "Which function is used to convert a string to an integer in C?",
+        options: ["atoi()", "itoa()", "atof()", "strtol()"],
+        answer: "atoi()"
+      }
+    ]
+  },{
+    name: "Dynamic Memory allocation",
+    questions: [
+      {
+        question: "What is dynamic memory allocation in C used for?",
+        options: ["Allocating memory at compile time", "Allocating memory at runtime", "Allocating memory for global variables", "Allocating memory for static variables"],
+        answer: "Allocating memory at runtime"
+      },
+      {
+        question: "Which library is required to use dynamic memory allocation functions in C?",
+        options: ["<stdio.h>", "<stdlib.h>", "<string.h>", "<math.h>"],
+        answer: "<stdlib.h>"
+      },
+      {
+        question: "Which function is used to allocate memory dynamically in C?",
+        options: ["malloc()", "calloc()", "realloc()", "All of the above"],
+        answer: "All of the above"
+      },
+      {
+        question: "What does the malloc() function in C return if it fails to allocate memory?",
+        options: ["NULL", "0", "An error code", "It does not return anything"],
+        answer: "NULL"
+      },
+      {
+        question: "How do you allocate memory for an array of n integers using malloc() in C?",
+        options: ["int* arr = malloc(n * sizeof(int));", "int* arr = malloc(sizeof(int) * n);", "int* arr = malloc(n);", "int* arr = malloc(sizeof(int));"],
+        answer: "int* arr = malloc(n * sizeof(int));"
+      },
+      {
+        question: "Which function is used to allocate and initialize memory to zero in C?",
+        options: ["malloc()", "calloc()", "realloc()", "memset()"],
+        answer: "calloc()"
+      },
+      {
+        question: "How do you free memory allocated dynamically using malloc() in C?",
+        options: ["free(ptr);", "release(ptr);", "delete(ptr);", "dealloc(ptr);"],
+        answer: "free(ptr);"
+      },
+      {
+        question: "What is the purpose of the realloc() function in C?",
+        options: ["To allocate memory", "To initialize memory to zero", "To reallocate memory blocks", "To concatenate strings"],
+        answer: "To reallocate memory blocks"
+      },
+      {
+        question: "What will happen if you try to access memory that has been freed using free() in C?",
+        options: ["It will result in a runtime error", "It will automatically allocate new memory", "It will return NULL", " It will cause a compile-time error"],
+        answer: "It will result in a runtime error"
+      },
+      {
+        question: " Which function is used to calculate the size of allocated memory block in bytes in C?",
+        options: ["size()", "memsize()", "sizeof()", "malloc_size()"],
+        answer: "malloc_size()"
+      }
+    ]
+  }
+,{
+    name: "Pointers",
+    questions: [
+      {
+        question: "What does a pointer variable store?",
+        options: ["Value of the variable it points to", "Address of the variable it points to", "Value of its own memory location", "None of the above"],
+        answer: "Address of the variable it points to"
+      },{
+        question: "Which operator is used to access the value pointed to by a pointer?",
+        options: ["*", "&", "->", "::"],
+        answer: "*"
+      },{
+        question: "What is the size of a pointer variable in C programming?",
+        options: ["Depends on the compiler", "2 bytes", "4 bytes", "8 bytes"],
+        answer: "4 bytes"
+      },{
+        question: "What is the output of the following code?'int x = 5;int *ptr = &x;printf('%d', *ptr);",
+        options: ["5", "Address of x", "Error", "Garbage value"],
+        answer: "5"
+      },{
+        question: "What does the function malloc() do in C?",
+        options: ["Allocates memory for a new variable", "Frees memory allocated to a variable", "Returns the size of the allocated memory", "None of the above"],
+        answer: "Allocates memory for a new variable"
+      },{
+        question: "What does the void * pointer type mean?",
+        options: ["Pointer to an integer", "Pointer to nothing", "Pointer to a function", "Generic pointer"],
+        answer: "Generic pointer"
+      },{
+        question: "What does the free() function do in C?",
+        options: ["Allocates memory for a variable", "Frees memory allocated to a variable", "Initializes a pointer variable", "None of the above"],
+        answer: "Frees memory allocated to a variable"
+      },{
+        question: "What is the correct way to declare a pointer to a function that takes no arguments and returns an integer?",
+        options: ["int (*ptr)();", "int *ptr();", "int (*ptr)[];", "int *ptr[];"],
+        answer: "int (*ptr)();"
+      },{
+        question: "What does the NULL pointer represent in C?",
+        options: ["A pointer with value zero", "A pointer with address zero", "A pointer that points to a specific memory location", "A pointer that points to the last element of an array"],
+        answer: "A pointer with value zero"
+      },{
+        question: "What is the meaning of the expression ptr++ in C?",
+        options: ["Increment the value pointed to by ptr", "Increment the address pointed to by ptr", "Move the pointer to the next memory location", "Decrement the value pointed to by ptr"],
+        answer: "Move the pointer to the next memory location"
+      }
+    ]
+  },{
+    name: "Linked List",
+    questions: [
+      {
+        question: "In a singly linked list, each node contains:",
+        options: ["Data only", "Pointer to the next node only", "Both data and pointer to the next node", "Pointer to the previous node"],
+        answer: "Both data and pointer to the next node"
+      },{
+        question: "What is the time complexity to search for an element in an unsorted singly linked list with 'n' elements?",
+        options: ["O(n)", "O(log(n))", "O(1)", "O(n^2)"],
+        answer: "O(n)"
+      },{
+        question: "What is the time complexity of deleting the first node from a singly linked list?",
+        options: ["O(n)", "O(log(n))", "O(1)", "O(n^2)"],
+        answer: "O(1)"
+      },{
+        question: "What is the primary disadvantage of using a linked list over an array?",
+        options: ["Linked lists have a higher space complexity", "Linked lists do not support random access of elements", "Linked lists are less flexible in terms of data types", "Linked lists have slower traversal time"],
+        answer: "Linked lists do not support random access of elements"
+      },{
+        question: "Which of the following is not a type of linked list?",
+        options: ["Singly linked list", "Doubly linked list", "Triply linked list", "Circular linked list"],
+        answer: "Triply linked list"
+      },{
+        question: "In a singly linked list, how is the last node identified?",
+        options: ["By checking if its next pointer is NULL", "By checking if its data is NULL", "By checking if its previous pointer is NULL", "By checking if its data is -1"],
+        answer: "By checking if its next pointer is NULL"
+      },{
+        question: "Which of the following operations on a linked list requires traversal of the entire list?",
+        options: ["Insertion at the beginning", "Deletion from the end", "Deletion from the beginning", "Accessing the middle element"],
+        answer: "Deletion from the end"
+      },{
+        question: "How do you check if a linked list contains a cycle efficiently?",
+        options: ["Using recursion", "Counting the number of nodes", "Using two pointers moving at different speeds", "Traversing the list twice"],
+        answer: "Using two pointers moving at different speeds"
+      },{
+        question: "How do you find the nth node from the end in a singly linked list efficiently?",
+        options: ["Traverse the list twice", "Use two pointers with a gap of n nodes", "Use recursion", "Reverse the list and then find the nth node from the beginning"],
+        answer: "Use two pointers with a gap of n nodes"
+      },{
+        question: "Which of the following is a valid way to represent an empty linked list in C?",
+        options: ["Setting the head pointer to NULL", "Allocating memory for a node with NULL data and next pointer", "Setting the head pointer to a garbage value", "Allocating memory for a node with random data and next pointer"],
+        answer: "Setting the head pointer to NULL"
+      }
+    ]
+  },{
+    name: "Sorting Techniques",
+    questions: [
+      {
+        question: "Which sorting algorithm has the best average-case time complexity among the following?",
+        options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        answer: "Merge Sort"
+      },
+      {
+        question: "Which sorting algorithm is not an in-place sorting algorithm?",
+        options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Quick Sort"],
+        answer: "Merge Sort"
+      },
+      {
+        question: "What is the time complexity of Quick Sort in the worst case?",
+        options: ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+        answer: "O(n^2)"
+      },
+      {
+        question: "Which sorting algorithm is known for its stability?",
+        options: ["Quick Sort", "Heap Sort", "Merge Sort", "Selection Sort"],
+        answer: "Merge Sort"
+      },
+      {
+        question: "Which sorting algorithm works by repeatedly finding the minimum element from the unsorted part and putting it at the beginning?",
+        options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        answer: "Selection Sort"
+      },
+      {
+        question: "Which sorting algorithm performs well when the data is already partially sorted or when the size of the data is small?",
+        options: ["Bubble Sort", "Insertion Sort", "Quick Sort", "Merge Sort"],
+        answer: "Insertion Sort"
+      },
+      {
+        question: "Which sorting algorithm has a time complexity of O(n^2) in the worst case scenario?",
+        options: ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
+        answer: "Bubble Sort"
+      },
+      {
+        question: "Which sorting algorithm uses a divide-and-conquer strategy?",
+        options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        answer: "Merge Sort"
+      },
+      {
+        question: "Which sorting algorithm is known for its worst-case time complexity of O(n log n)?",
+        options: ["Quick Sort", "Bubble Sort", " Insertion Sort", "Merge Sort"],
+        answer: "Quick Sort"
+      },
+      {
+        question: "Which sorting algorithm has a space complexity of O(1) (in-place sorting)?",
+        options: ["Merge Sort", "Quick Sort", "Heap Sort", "Insertion Sort"],
+        answer: "Quick Sort"
+      }
+    ]
+  }
+];
+
+let currentQuestionIndices = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // Store current question index for each topic
+let correctnessMessages = ["", "","","","","","","","","","","","","",""]; // Store correctness message for each topic
+
+function loadQuestion(topicIndex) {
+  const currentTopic = topics[topicIndex];
+  const currentQuestion = currentTopic.questions[currentQuestionIndices[topicIndex]];
+  const topicContainer = document.getElementById(`topic${topicIndex + 1}-container`);
+  topicContainer.innerHTML = `
+    <h2>${currentTopic.name}</h2>
+    <div class="question-container">
+      <p class="question">${currentQuestion.question}</p>
+    </div>
+    <p id="result-${topicIndex}" class="result">${correctnessMessages[topicIndex]}</p>
+    <button class="prev-btn" onclick="prevQuestion(${topicIndex})">Previous</button>
+    <button class="next-btn" onclick="nextQuestion(${topicIndex})">Next</button>
+    <button class="restart-btn" onclick="restartQuiz(${topicIndex})" style="display: none;">Restart</button>
+  `;
+  const questionContainer = topicContainer.querySelector(".question-container");
+  currentQuestion.options.forEach(option => {
+    const optionButton = document.createElement("button");
+    optionButton.textContent = option;
+    optionButton.className = "option";
+    optionButton.onclick = function() {
+      checkAnswer(this, currentQuestion.answer, topicIndex);
+    };
+    questionContainer.appendChild(optionButton);
+  });
+}
+
+function checkAnswer(selectedOption, correctAnswer, topicIndex) {
+  const userAnswer = selectedOption.textContent;
+  const resultDisplay = document.getElementById(`result-${topicIndex}`);
+  if (userAnswer === correctAnswer) {
+    correctnessMessages[topicIndex] = "Correct!";
+    resultDisplay.textContent = "Correct!";
+    resultDisplay.style.color = "green";
+  } else {
+    correctnessMessages[topicIndex] = `Incorrect! The correct answer is ${correctAnswer}.`;
+    resultDisplay.textContent = `Incorrect! The correct answer is ${correctAnswer}.`;
+    resultDisplay.style.color = "red";
+  }
+  selectedOption.disabled = true;
+}
+
+function prevQuestion(topicIndex) {
+  if (currentQuestionIndices[topicIndex] > 0) {
+    currentQuestionIndices[topicIndex]--;
+    loadQuestion(topicIndex);
+  }
+}
+
+function nextQuestion(topicIndex) {
+  const currentTopic = topics[topicIndex];
+  const totalQuestions = currentTopic.questions.length;
+  if (currentQuestionIndices[topicIndex] < totalQuestions - 1) {
+    currentQuestionIndices[topicIndex]++;
+    loadQuestion(topicIndex);
+  } else {
+    document.getElementById(`result-${topicIndex}`).textContent = "Quiz completed for this topic!";
+    const nextButton = document.querySelector(`#topic${topicIndex + 1}-container .next-btn`);
+    const prevButton = document.querySelector(`#topic${topicIndex + 1}-container .prev-btn`);
+    const restartButton = document.querySelector(`#topic${topicIndex + 1}-container .restart-btn`);
+    nextButton.style.display = "none";
+    prevButton.style.display = "none";
+    restartButton.style.display = "block";
+  }
+}
+
+function restartQuiz(topicIndex) {
+  currentQuestionIndices[topicIndex] = 0;
+  correctnessMessages[topicIndex] = "";
+  loadQuestion(topicIndex);
+  const nextButton = document.querySelector(`#topic${topicIndex + 1}-container .next-btn`);
+  const prevButton = document.querySelector(`#topic${topicIndex + 1}-container .prev-btn`);
+  const restartButton = document.querySelector(`#topic${topicIndex + 1}-container .restart-btn`);
+  nextButton.style.display = "block";
+  prevButton.style.display = "block";
+  restartButton.style.display = "none";
+}
+
+// Load the first question for each topic when the page loads
+window.onload = function() {
+  console.log(topics.length);
+  topics.forEach((item, index) => {
+    loadQuestion(index);
+  });
+};
+
+  </script>
+</html>

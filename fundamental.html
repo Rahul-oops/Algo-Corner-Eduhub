@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWD Education Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h2 {
+  margin-bottom: 10px;
+}
+
+.answer {
+  display: none;
+  /* color :aqua; */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.mainc{
+    margin: 5%;
+    width: 90%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.toggle-answer{
+    background-color:aqua;
+}
+
+    </style>
+    <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/h1.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">VIDEO LECTURES</a></li>
+            <li><a href="./blog.html">NOTES AND ASSIGNMENT</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+            <li><a href="./resources.html">RESOURCES</a></li>
+            <li><a href="./fundamental.html">CS FUNDAMENTALS</a></li>
+            <li><a href="./quizzes.html">QUIZZES</a></li>
+            <li><a href="./project.html">PROJECT</a></li>
+            <li><a href="./experience.html">SUCCESS STORIES</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Computer Fundamentals</h1>
+    </section>
+
+   <!--course-->
+   <div class="mainc">
+    <section class="question">
+        <h2>Question 1: What is a computer?</h2>
+        <p class="answer">A computer is an electronic device that processes data to perform various tasks.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 2: What are the main parts of a computer?</h2>
+        <p class="answer">The main parts of a computer include the central processing unit (CPU), memory (RAM), storage devices (hard drive, SSD), input devices (keyboard, mouse), and output devices (monitor, printer).</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 3: What is the CPU?</h2>
+        <p class="answer">The CPU, or central processing unit, is the "brain" of the computer responsible for executing instructions and performing calculations.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 4: What is RAM?</h2>
+        <p class="answer">RAM, or random access memory, is temporary memory used by the computer to store data and programs that are currently in use.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 5: What is a hard drive?</h2>
+        <p class="answer">A hard drive is a storage device used to store data permanently on a computer.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 6: What is an operating system?</h2>
+        <p class="answer">An operating system is software that manages computer hardware and provides common services for computer programs.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 7: What is a file?</h2>
+        <p class="answer">A file is a collection of data stored on a computer under a specific name and location.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 8: What is a folder?</h2>
+        <p class="answer">A folder is a container used to organize and store files on a computer.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 9: What is a mouse used for?</h2>
+        <p class="answer">A mouse is an input device used to move the cursor on the screen and interact with graphical user interfaces.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 10: What is a keyboard used for?</h2>
+        <p class="answer">A keyboard is an input device used to enter text, numbers, and commands into a computer.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 11: What is a monitor used for?</h2>
+        <p class="answer">A monitor is an output device used to display information and graphics generated by the computer.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 12: What is a printer used for?</h2>
+        <p class="answer">A printer is an output device used to produce physical copies of documents and images on paper.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 13: What is a web browser?</h2>
+        <p class="answer">A web browser is software used to access and view websites on the internet.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 14: What is a search engine?</h2>
+        <p class="answer">A search engine is a website or software that allows users to search for information on the internet.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 15: What is a virus?</h2>
+        <p class="answer">A virus is a type of malicious software designed to replicate itself and infect computer systems, often causing harm to files or stealing information.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 16: What is a firewall?</h2>
+        <p class="answer">A firewall is a security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 17: What is a password?</h2>
+        <p class="answer">A password is a secret combination of characters used to authenticate a user and gain access to a computer, system, or service.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 18: What is a URL?</h2>
+        <p class="answer">A URL, or Uniform Resource Locator, is a web address used to specify the location of a resource on the internet.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 19: What is an email?</h2>
+        <p class="answer">An email is an electronic message sent over a computer network from one person to another.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 20: What is a browser cache?</h2>
+        <p class="answer">A browser cache is a temporary storage location on a computer where web pages and files are stored to improve website loading times.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 21: What is a cursor?</h2>
+        <p class="answer">A cursor is a graphical representation (usually an arrow or blinking line) on the computer screen that indicates where the next action will occur, such as typing or clicking.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 22: What is a desktop?</h2>
+        <p class="answer">A desktop is the primary graphical interface of a computer operating system, where users can access files, folders, and applications.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 23: What is a recycle bin?</h2>
+        <p class="answer">A recycle bin is a feature in the Windows operating system where deleted files are temporarily stored before they are permanently removed from the system.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 24: What is a right-click?</h2>
+        <p class="answer">Right-clicking refers to the action of pressing the right button on a mouse to display a context menu with options relevant to the current task or selection.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 25: What is a hyperlink?</h2>
+        <p class="answer">A hyperlink is a clickable element on a web page or document that, when clicked, directs the user to another location, such as another web page or a specific section within the same document.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 26: What is a screenshot?</h2>
+        <p class="answer">A screenshot is a digital image captured by the computer to record the visible items displayed on the screen at a specific moment.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 27: What is a webcam?</h2>
+        <p class="answer">A webcam is a camera device connected to a computer that captures video and images for video conferencing, live streaming, or other purposes.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 28: What is a USB port?</h2>
+        <p class="answer">A USB port is a standard interface on computers and other electronic devices used to connect peripherals such as keyboards, mice, printers, and external storage devices.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>.
+    <section class="question">
+        <h2>Question 29: What is a software update?</h2>
+        <p class="answer">A software update is a release of patches, bug fixes, or new features for software programs to improve performance, security, or functionality.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+    <section class="question">
+        <h2>Question 30: What is a taskbar?</h2>
+        <p class="answer">A taskbar is a horizontal bar displayed on the screen's edge containing buttons or icons representing open programs, system notifications, and shortcuts to frequently used applications.</p>
+        <button class="toggle-answer">Show/Hide Answer</button>
+    </section>
+   </div>
+
+<!--end facilities-->
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Pioneering Development of Education for Disabled Persons to Illuminate Brighter Futures</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made With <i class="fa-solid fa-heart"></i> by Rahul Das</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  <script>
+    // script.js
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButtons = document.querySelectorAll(".toggle-answer");
+  
+  toggleButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const answer = this.previousElementSibling;
+      answer.style.display = answer.style.display === "none" ? "block" : "none";
+    });
+  });
+});
+
+  </script>
+</html>
